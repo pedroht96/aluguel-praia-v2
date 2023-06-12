@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1b77650c-80f3-4a15-a669-7f27674f0c9c",
+		"_postman_id": "45460e25-71ae-43e8-8bef-f6a93f9d48a0",
 		"name": "beach-product-rental",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14870818"
 	},
 	"item": [
 		{
@@ -18,7 +19,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userName\": \"user 1\",\r\n    \"productType\": \"BEACH_CHAIR\",\r\n    \"timeHour\": 10\r\n}",
+					"raw": "{\r\n    \"userName\": \"Willian Moraes\",\r\n    \"productType\": \"BEACH_CHAIR\",\r\n    \"timeHour\": 10\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -34,6 +35,40 @@
 					"path": [
 						"orders",
 						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/product/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "myToken123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productType\": \"BEACH_CHAIR\",\r\n    \"newValue\": 99000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						""
 					]
 				}
 			},

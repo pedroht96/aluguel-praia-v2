@@ -25,7 +25,7 @@ public class ProductService {
 	}
 
 	public ResponseEntity<Object> findProducts(Pageable pageable) {
-		Page<Product> list = productRepository.findProducts(pageable);
+		Page<Product> list = productRepository.findAllProducts(pageable);
 		return new ResponseEntity<>(new PageImpl<Product>(list.toList(), pageable, list.getTotalElements()),
 				HttpStatus.OK);
 	}

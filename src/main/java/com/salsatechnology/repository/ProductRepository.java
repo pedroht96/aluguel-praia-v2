@@ -15,5 +15,5 @@ public interface ProductRepository extends PagingAndSortingRepository<Product, L
     Product findProductByType(@Param("productType") String productType);
 
     @Query(value = "SELECT * FROM product", nativeQuery = true)
-    Page<Product> findProducts(Pageable pageable);
+    Page<Product> findAllProducts(Pageable pageable);
 }

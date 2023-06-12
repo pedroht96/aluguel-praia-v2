@@ -12,6 +12,10 @@ import org.springframework.stereotype.Repository;
 public interface ProductOrderRepository extends PagingAndSortingRepository<ProductOrder, Long> {
 
     @Query(value = "SELECT * FROM product_order WHERE product_type = :productType", nativeQuery = true)
-    Page<ProductOrder> findProductOrder(@Param("productType")String productType, Pageable pageable);
+    Page<ProductOrder> findProductOrder(@Param("productType") String productType, Pageable pageable);
+
+    @Query(value = "SELECT * FROM product_order", nativeQuery = true)
+    Page<ProductOrder> findProductOrders(Pageable pageable);
+
 
 }
