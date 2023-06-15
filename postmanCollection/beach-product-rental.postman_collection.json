@@ -1,0 +1,208 @@
+{
+  "info": {
+    "_postman_id": "45460e25-71ae-43e8-8bef-f6a93f9d48a0",
+    "name": "beach-product-rental",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14870818"
+  },
+  "item": [
+    {
+      "name": "ProductOrder",
+      "item": [
+        {
+          "name": "localhost:8080/orders/create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Token",
+                "value": "myToken123",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userName\": \"Pedro Teste\",\r\n    \"productType\": \"SURFBOARD\",\r\n    \"timeHour\": 4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/orders/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "orders",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:8080/orders/14",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "X-Token",
+                "value": "myToken123",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/orders",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:8080/orders/BEACH_CHAIR?page=0&size=10",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Token",
+                "value": "myToken123",
+                "type": "default",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/orders/SURFBOARD?page=0&size=10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "orders",
+                "SURFBOARD"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "localhost:8080/product/update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "X-Token",
+                "value": "myToken123",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productType\": \"BEACH_CHAIR\",\r\n    \"newValue\": 3500\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/product/",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "product",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:8080/product?page=0&size=10",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Token",
+                "value": "myToken123",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/product?page=0&size=2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "product"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "localhost:8080/product/BEACH_CHAIR",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Token",
+                "value": "myToken123",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "localhost:8080/product/SURFBOARD",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "product",
+                "SURFBOARD"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
