@@ -10,12 +10,5 @@ public class BeachProductRentalApplication {
 		SpringApplication.run(BeachProductRentalApplication.class, args);
 	}
 
-//	@Bean
-//	public FilterRegistrationBean<AuthenticationFilter> authenticationFilterRegistration() {
-//		FilterRegistrationBean<AuthenticationFilter> registration = new FilterRegistrationBean<>();
-//		registration.setFilter(new AuthenticationFilter());
-//		registration.addUrlPatterns("/*");
-//		return registration;
-//	}
 
 }

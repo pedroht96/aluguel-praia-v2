@@ -40,6 +40,12 @@ public class ProductOrderService {
 				list.getTotalElements()), HttpStatus.OK);
 	}
 
+	@Transactional
+	public ResponseEntity<Object> deleteOrderById(Long id) {
+		productOrderRepository.deleteById(id);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+
 	private ProductOrder createProductOrder(ProductOrderDTO productOrderDTO, Product product) {
 
 		Long total = calcProductTotal(product.getProductValue(), productOrderDTO.getTimeHour());

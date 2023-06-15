@@ -27,4 +27,9 @@ public class ProductOrderController {
 	public ResponseEntity<Object> getProductOrderByProductType(@PathVariable String productType, Pageable pageable) {
 		return productOrderService.findProductOrderByProductType(productType, pageable);
 	}
+
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Object> deleteOrderById(@PathVariable Long id) {
+		return productOrderService.deleteOrderById(id);
+	}
 }

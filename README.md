@@ -47,9 +47,15 @@ Pedro vai receber uma comissão no valor de R$31,20 pelo aluguel do produto SURF
 - Não é permitido criar novas entidades.
 - Fique a vontade para criar novas classes.
 
-Adicione na classe ProductOrderController um método para trazer a lista de pedidos, deve existir pelo menos um campo para ser utilizado como filtro.
+Adicione na classe ProductOrderController um método para trazer a lista de pedidos, deve existir pelo menos um campo
+para ser utilizado como filtro.
 
-Fique a vontade para adicionar mais funcionalidades ao teste, como: criação de testes unitários, utilização de docker etc.
+Fique a vontade para adicionar mais funcionalidades ao teste, como: criação de testes unitários, utilização de docker
+etc.
 
+##Como executar:
 
+1- Execute o arquivo docker-compose.yml
+
+2-A collection do postman se encontra na pasta "postman"
 

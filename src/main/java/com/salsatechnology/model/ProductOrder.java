@@ -25,7 +25,5 @@ public class ProductOrder {
 	private Long productValue;
 	private Long productTotal;
 	private Long userAmount;
-	
-	
-	
+
 }
